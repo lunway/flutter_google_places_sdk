@@ -21,4 +21,7 @@ class OpeningHours with _$OpeningHours {
   /// Parse an [OpeningHours] from json.
   factory OpeningHours.fromJson(Map<String, Object?> json) =>
       _$OpeningHoursFromJson(json);
+
+  // add tojson method
+  Map<String, Object?> toJson() => _$OpeningHoursToJson(this);
 }

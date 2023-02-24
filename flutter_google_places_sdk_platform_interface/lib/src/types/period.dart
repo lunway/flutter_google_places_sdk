@@ -16,4 +16,7 @@ class Period with _$Period {
 
   /// Parse an [Period] from json.
   factory Period.fromJson(Map<String, Object?> json) => _$PeriodFromJson(json);
+
+  // add tojson method
+  Map<String, Object?> toJson() => _$PeriodToJson(this);
 }

@@ -26,4 +26,7 @@ class AddressComponent with _$AddressComponent {
   /// Parse an [AddressComponent] from json.
   factory AddressComponent.fromJson(Map<String, Object?> json) =>
       _$AddressComponentFromJson(json);
+
+  // add tojson method
+  Map<String, Object?> toJson() => _$AddressComponentToJson(this);
 }

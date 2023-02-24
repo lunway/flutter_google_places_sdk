@@ -44,6 +44,9 @@ class Place with _$Place {
   factory Place.fromJson(Map<String, Object?> json) =>
       _$PlaceFromJson(json);
 
+  // add tojson method
+  Map<String, Object?> toJson() => _$PlaceToJson(this);
+
 //
 // static Place fromMap(Map<String, Object> map) => Place(
 //       address: map['address'],

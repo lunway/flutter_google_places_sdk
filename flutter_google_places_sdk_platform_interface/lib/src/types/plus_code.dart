@@ -20,4 +20,7 @@ class PlusCode with _$PlusCode {
   /// Parse an [PlusCode] from json.
   factory PlusCode.fromJson(Map<String, Object?> json) =>
       _$PlusCodeFromJson(json);
+
+  // add tojson method
+  Map<String, Object?> toJson() => _$PlusCodeToJson(this);
 }

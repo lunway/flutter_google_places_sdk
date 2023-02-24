@@ -22,4 +22,7 @@ class TimeOfWeek with _$TimeOfWeek {
   /// Parse an [TimeOfWeek] from json.
   factory TimeOfWeek.fromJson(Map<String, Object?> json) =>
       _$TimeOfWeekFromJson(json);
+
+  // add tojson method
+  Map<String, Object?> toJson() => _$TimeOfWeekToJson(this);
 }

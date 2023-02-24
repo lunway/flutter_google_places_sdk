@@ -10,7 +10,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_google_places_sdk_platform_interface: ^0.2.4+3
+  flutter_google_places_sdk_platform_interface:
+    git:
+      url: git@github.com:lunway/flutter_google_places_sdk.git
+      path: flutter_google_places_sdk_platform_interface
 
 dev_dependencies:
   flutter_test:

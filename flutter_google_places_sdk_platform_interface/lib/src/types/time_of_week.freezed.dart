@@ -21,10 +21,10 @@ TimeOfWeek _$TimeOfWeekFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$TimeOfWeek {
   /// The day of the week.
-  DayOfWeek get day => throw _privateConstructorUsedError;
+  DayOfWeek? get day => throw _privateConstructorUsedError;
 
   /// The time in 24 hour format, for example "1730", or "0000"
-  PlaceLocalTime get time => throw _privateConstructorUsedError;
+  PlaceLocalTime? get time => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,9 +38,9 @@ abstract class $TimeOfWeekCopyWith<$Res> {
           TimeOfWeek value, $Res Function(TimeOfWeek) then) =
       _$TimeOfWeekCopyWithImpl<$Res, TimeOfWeek>;
   @useResult
-  $Res call({DayOfWeek day, PlaceLocalTime time});
+  $Res call({DayOfWeek? day, PlaceLocalTime? time});
 
-  $PlaceLocalTimeCopyWith<$Res> get time;
+  $PlaceLocalTimeCopyWith<$Res>? get time;
 }
 
 /// @nodoc
@@ -56,25 +56,29 @@ class _$TimeOfWeekCopyWithImpl<$Res, $Val extends TimeOfWeek>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? day = null,
-    Object? time = null,
+    Object? day = freezed,
+    Object? time = freezed,
   }) {
     return _then(_value.copyWith(
-      day: null == day
+      day: freezed == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
-              as DayOfWeek,
-      time: null == time
+              as DayOfWeek?,
+      time: freezed == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
-              as PlaceLocalTime,
+              as PlaceLocalTime?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $PlaceLocalTimeCopyWith<$Res> get time {
-    return $PlaceLocalTimeCopyWith<$Res>(_value.time, (value) {
+  $PlaceLocalTimeCopyWith<$Res>? get time {
+    if (_value.time == null) {
+      return null;
+    }
+
+    return $PlaceLocalTimeCopyWith<$Res>(_value.time!, (value) {
       return _then(_value.copyWith(time: value) as $Val);
     });
   }
@@ -88,10 +92,10 @@ abstract class _$$_TimeOfWeekCopyWith<$Res>
       __$$_TimeOfWeekCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({DayOfWeek day, PlaceLocalTime time});
+  $Res call({DayOfWeek? day, PlaceLocalTime? time});
 
   @override
-  $PlaceLocalTimeCopyWith<$Res> get time;
+  $PlaceLocalTimeCopyWith<$Res>? get time;
 }
 
 /// @nodoc
@@ -105,18 +109,18 @@ class __$$_TimeOfWeekCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? day = null,
-    Object? time = null,
+    Object? day = freezed,
+    Object? time = freezed,
   }) {
     return _then(_$_TimeOfWeek(
-      day: null == day
+      day: freezed == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
-              as DayOfWeek,
-      time: null == time
+              as DayOfWeek?,
+      time: freezed == time
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
-              as PlaceLocalTime,
+              as PlaceLocalTime?,
     ));
   }
 }
@@ -124,18 +128,18 @@ class __$$_TimeOfWeekCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TimeOfWeek implements _TimeOfWeek {
-  const _$_TimeOfWeek({required this.day, required this.time});
+  const _$_TimeOfWeek({this.day, this.time});
 
   factory _$_TimeOfWeek.fromJson(Map<String, dynamic> json) =>
       _$$_TimeOfWeekFromJson(json);
 
   /// The day of the week.
   @override
-  final DayOfWeek day;
+  final DayOfWeek? day;
 
   /// The time in 24 hour format, for example "1730", or "0000"
   @override
-  final PlaceLocalTime time;
+  final PlaceLocalTime? time;
 
   @override
   String toString() {
@@ -171,8 +175,7 @@ class _$_TimeOfWeek implements _TimeOfWeek {
 
 abstract class _TimeOfWeek implements TimeOfWeek {
   const factory _TimeOfWeek(
-      {required final DayOfWeek day,
-      required final PlaceLocalTime time}) = _$_TimeOfWeek;
+      {final DayOfWeek? day, final PlaceLocalTime? time}) = _$_TimeOfWeek;
 
   factory _TimeOfWeek.fromJson(Map<String, dynamic> json) =
       _$_TimeOfWeek.fromJson;
@@ -180,11 +183,11 @@ abstract class _TimeOfWeek implements TimeOfWeek {
   @override
 
   /// The day of the week.
-  DayOfWeek get day;
+  DayOfWeek? get day;
   @override
 
   /// The time in 24 hour format, for example "1730", or "0000"
-  PlaceLocalTime get time;
+  PlaceLocalTime? get time;
   @override
   @JsonKey(ignore: true)
   _$$_TimeOfWeekCopyWith<_$_TimeOfWeek> get copyWith =>

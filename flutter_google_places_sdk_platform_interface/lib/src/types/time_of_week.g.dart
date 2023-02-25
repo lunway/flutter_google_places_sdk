@@ -7,15 +7,17 @@ part of 'time_of_week.dart';
 // **************************************************************************
 
 _$_TimeOfWeek _$$_TimeOfWeekFromJson(Map json) => _$_TimeOfWeek(
-      day: $enumDecode(_$DayOfWeekEnumMap, json['day']),
-      time: PlaceLocalTime.fromJson(
-          Map<String, Object?>.from(json['time'] as Map)),
+      day: $enumDecodeNullable(_$DayOfWeekEnumMap, json['day']),
+      time: json['time'] == null
+          ? null
+          : PlaceLocalTime.fromJson(
+              Map<String, Object?>.from(json['time'] as Map)),
     );
 
 Map<String, dynamic> _$$_TimeOfWeekToJson(_$_TimeOfWeek instance) =>
     <String, dynamic>{
-      'day': _$DayOfWeekEnumMap[instance.day]!,
-      'time': instance.time.toJson(),
+      'day': _$DayOfWeekEnumMap[instance.day],
+      'time': instance.time?.toJson(),
     };
 
 const _$DayOfWeekEnumMap = {

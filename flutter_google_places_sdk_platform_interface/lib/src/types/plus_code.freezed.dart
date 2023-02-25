@@ -21,10 +21,10 @@ PlusCode _$PlusCodeFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$PlusCode {
   /// The compound plus code, e.g. "9G8F+5W Zurich, Switzerland".
-  String get compoundCode => throw _privateConstructorUsedError;
+  String? get compoundCode => throw _privateConstructorUsedError;
 
   /// The geo plus code, e.g. "8FVC9G8F+5W".
-  String get globalCode => throw _privateConstructorUsedError;
+  String? get globalCode => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,7 +37,7 @@ abstract class $PlusCodeCopyWith<$Res> {
   factory $PlusCodeCopyWith(PlusCode value, $Res Function(PlusCode) then) =
       _$PlusCodeCopyWithImpl<$Res, PlusCode>;
   @useResult
-  $Res call({String compoundCode, String globalCode});
+  $Res call({String? compoundCode, String? globalCode});
 }
 
 /// @nodoc
@@ -53,18 +53,18 @@ class _$PlusCodeCopyWithImpl<$Res, $Val extends PlusCode>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? compoundCode = null,
-    Object? globalCode = null,
+    Object? compoundCode = freezed,
+    Object? globalCode = freezed,
   }) {
     return _then(_value.copyWith(
-      compoundCode: null == compoundCode
+      compoundCode: freezed == compoundCode
           ? _value.compoundCode
           : compoundCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      globalCode: null == globalCode
+              as String?,
+      globalCode: freezed == globalCode
           ? _value.globalCode
           : globalCode // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -76,7 +76,7 @@ abstract class _$$_PlusCodeCopyWith<$Res> implements $PlusCodeCopyWith<$Res> {
       __$$_PlusCodeCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String compoundCode, String globalCode});
+  $Res call({String? compoundCode, String? globalCode});
 }
 
 /// @nodoc
@@ -90,18 +90,18 @@ class __$$_PlusCodeCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? compoundCode = null,
-    Object? globalCode = null,
+    Object? compoundCode = freezed,
+    Object? globalCode = freezed,
   }) {
     return _then(_$_PlusCode(
-      compoundCode: null == compoundCode
+      compoundCode: freezed == compoundCode
           ? _value.compoundCode
           : compoundCode // ignore: cast_nullable_to_non_nullable
-              as String,
-      globalCode: null == globalCode
+              as String?,
+      globalCode: freezed == globalCode
           ? _value.globalCode
           : globalCode // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -109,18 +109,18 @@ class __$$_PlusCodeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PlusCode implements _PlusCode {
-  const _$_PlusCode({required this.compoundCode, required this.globalCode});
+  const _$_PlusCode({this.compoundCode, this.globalCode});
 
   factory _$_PlusCode.fromJson(Map<String, dynamic> json) =>
       _$$_PlusCodeFromJson(json);
 
   /// The compound plus code, e.g. "9G8F+5W Zurich, Switzerland".
   @override
-  final String compoundCode;
+  final String? compoundCode;
 
   /// The geo plus code, e.g. "8FVC9G8F+5W".
   @override
-  final String globalCode;
+  final String? globalCode;
 
   @override
   String toString() {
@@ -158,19 +158,18 @@ class _$_PlusCode implements _PlusCode {
 
 abstract class _PlusCode implements PlusCode {
   const factory _PlusCode(
-      {required final String compoundCode,
-      required final String globalCode}) = _$_PlusCode;
+      {final String? compoundCode, final String? globalCode}) = _$_PlusCode;
 
   factory _PlusCode.fromJson(Map<String, dynamic> json) = _$_PlusCode.fromJson;
 
   @override
 
   /// The compound plus code, e.g. "9G8F+5W Zurich, Switzerland".
-  String get compoundCode;
+  String? get compoundCode;
   @override
 
   /// The geo plus code, e.g. "8FVC9G8F+5W".
-  String get globalCode;
+  String? get globalCode;
   @override
   @JsonKey(ignore: true)
   _$$_PlusCodeCopyWith<_$_PlusCode> get copyWith =>

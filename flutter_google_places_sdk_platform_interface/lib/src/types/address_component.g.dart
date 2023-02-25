@@ -6,7 +6,7 @@ part of 'address_component.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AddressComponent _$$_AddressComponentFromJson(Map<String, dynamic> json) =>
+_$_AddressComponent _$$_AddressComponentFromJson(Map json) =>
     _$_AddressComponent(
       name: json['name'] as String,
       shortName: json['shortName'] as String,

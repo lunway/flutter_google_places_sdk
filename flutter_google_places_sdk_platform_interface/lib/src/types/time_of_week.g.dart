@@ -6,16 +6,16 @@ part of 'time_of_week.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TimeOfWeek _$$_TimeOfWeekFromJson(Map<String, dynamic> json) =>
-    _$_TimeOfWeek(
+_$_TimeOfWeek _$$_TimeOfWeekFromJson(Map json) => _$_TimeOfWeek(
       day: $enumDecode(_$DayOfWeekEnumMap, json['day']),
-      time: PlaceLocalTime.fromJson(json['time'] as Map<String, dynamic>),
+      time: PlaceLocalTime.fromJson(
+          Map<String, Object?>.from(json['time'] as Map)),
     );
 
 Map<String, dynamic> _$$_TimeOfWeekToJson(_$_TimeOfWeek instance) =>
     <String, dynamic>{
       'day': _$DayOfWeekEnumMap[instance.day]!,
-      'time': instance.time,
+      'time': instance.time.toJson(),
     };
 
 const _$DayOfWeekEnumMap = {

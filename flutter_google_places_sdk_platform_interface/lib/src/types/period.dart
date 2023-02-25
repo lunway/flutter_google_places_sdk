@@ -11,7 +11,7 @@ part 'period.g.dart';
 class Period with _$Period {
   const factory Period({
     required TimeOfWeek open,
-    required TimeOfWeek? close,
+    TimeOfWeek? close,
   }) = _Period;
 
   /// Parse an [Period] from json.

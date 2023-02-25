@@ -6,8 +6,7 @@ part of 'autocomplete_predictions.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AutocompletePrediction _$$_AutocompletePredictionFromJson(
-        Map<String, dynamic> json) =>
+_$_AutocompletePrediction _$$_AutocompletePredictionFromJson(Map json) =>
     _$_AutocompletePrediction(
       distanceMeters: json['distanceMeters'] as int?,
       placeId: json['placeId'] as String,

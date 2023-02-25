@@ -6,14 +6,15 @@ part of 'period.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Period _$$_PeriodFromJson(Map<String, dynamic> json) => _$_Period(
-      open: TimeOfWeek.fromJson(json['open'] as Map<String, dynamic>),
+_$_Period _$$_PeriodFromJson(Map json) => _$_Period(
+      open: TimeOfWeek.fromJson(Map<String, Object?>.from(json['open'] as Map)),
       close: json['close'] == null
           ? null
-          : TimeOfWeek.fromJson(json['close'] as Map<String, dynamic>),
+          : TimeOfWeek.fromJson(
+              Map<String, Object?>.from(json['close'] as Map)),
     );
 
 Map<String, dynamic> _$$_PeriodToJson(_$_Period instance) => <String, dynamic>{
-      'open': instance.open,
-      'close': instance.close,
+      'open': instance.open.toJson(),
+      'close': instance.close?.toJson(),
     };

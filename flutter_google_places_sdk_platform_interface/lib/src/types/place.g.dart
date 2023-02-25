@@ -6,10 +6,11 @@ part of 'place.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Place _$$_PlaceFromJson(Map<String, dynamic> json) => _$_Place(
+_$_Place _$$_PlaceFromJson(Map json) => _$_Place(
       address: json['address'] as String?,
       addressComponents: (json['addressComponents'] as List<dynamic>?)
-          ?.map((e) => AddressComponent.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              AddressComponent.fromJson(Map<String, Object?>.from(e as Map)))
           .toList(),
       businessStatus:
           $enumDecodeNullable(_$BusinessStatusEnumMap, json['businessStatus']),
@@ -18,18 +19,21 @@ _$_Place _$$_PlaceFromJson(Map<String, dynamic> json) => _$_Place(
           .toList(),
       latLng: json['latLng'] == null
           ? null
-          : LatLng.fromJson(json['latLng'] as Map<String, dynamic>),
+          : LatLng.fromJson(Map<String, Object?>.from(json['latLng'] as Map)),
       name: json['name'] as String?,
       openingHours: json['openingHours'] == null
           ? null
-          : OpeningHours.fromJson(json['openingHours'] as Map<String, dynamic>),
+          : OpeningHours.fromJson(
+              Map<String, Object?>.from(json['openingHours'] as Map)),
       phoneNumber: json['phoneNumber'] as String?,
       photoMetadatas: (json['photoMetadatas'] as List<dynamic>?)
-          ?.map((e) => PhotoMetadata.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              PhotoMetadata.fromJson(Map<String, Object?>.from(e as Map)))
           .toList(),
       plusCode: json['plusCode'] == null
           ? null
-          : PlusCode.fromJson(json['plusCode'] as Map<String, dynamic>),
+          : PlusCode.fromJson(
+              Map<String, Object?>.from(json['plusCode'] as Map)),
       priceLevel: json['priceLevel'] as int?,
       rating: (json['rating'] as num?)?.toDouble(),
       types: (json['types'] as List<dynamic>?)
@@ -39,7 +43,8 @@ _$_Place _$$_PlaceFromJson(Map<String, dynamic> json) => _$_Place(
       utcOffsetMinutes: json['utcOffsetMinutes'] as int?,
       viewport: json['viewport'] == null
           ? null
-          : LatLngBounds.fromJson(json['viewport'] as Map<String, dynamic>),
+          : LatLngBounds.fromJson(
+              Map<String, Object?>.from(json['viewport'] as Map)),
       websiteUri: json['websiteUri'] == null
           ? null
           : Uri.parse(json['websiteUri'] as String),
@@ -47,21 +52,23 @@ _$_Place _$$_PlaceFromJson(Map<String, dynamic> json) => _$_Place(
 
 Map<String, dynamic> _$$_PlaceToJson(_$_Place instance) => <String, dynamic>{
       'address': instance.address,
-      'addressComponents': instance.addressComponents,
+      'addressComponents':
+          instance.addressComponents?.map((e) => e.toJson()).toList(),
       'businessStatus': _$BusinessStatusEnumMap[instance.businessStatus],
       'attributions': instance.attributions,
-      'latLng': instance.latLng,
+      'latLng': instance.latLng?.toJson(),
       'name': instance.name,
-      'openingHours': instance.openingHours,
+      'openingHours': instance.openingHours?.toJson(),
       'phoneNumber': instance.phoneNumber,
-      'photoMetadatas': instance.photoMetadatas,
-      'plusCode': instance.plusCode,
+      'photoMetadatas':
+          instance.photoMetadatas?.map((e) => e.toJson()).toList(),
+      'plusCode': instance.plusCode?.toJson(),
       'priceLevel': instance.priceLevel,
       'rating': instance.rating,
       'types': instance.types?.map((e) => _$PlaceTypeEnumMap[e]!).toList(),
       'userRatingsTotal': instance.userRatingsTotal,
       'utcOffsetMinutes': instance.utcOffsetMinutes,
-      'viewport': instance.viewport,
+      'viewport': instance.viewport?.toJson(),
       'websiteUri': instance.websiteUri?.toString(),
     };
 

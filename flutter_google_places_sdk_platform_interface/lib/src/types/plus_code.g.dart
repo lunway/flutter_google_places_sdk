@@ -6,7 +6,7 @@ part of 'plus_code.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PlusCode _$$_PlusCodeFromJson(Map<String, dynamic> json) => _$_PlusCode(
+_$_PlusCode _$$_PlusCodeFromJson(Map json) => _$_PlusCode(
       compoundCode: json['compoundCode'] as String,
       globalCode: json['globalCode'] as String,
     );

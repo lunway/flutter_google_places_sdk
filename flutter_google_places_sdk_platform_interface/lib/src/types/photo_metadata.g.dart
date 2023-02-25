@@ -6,8 +6,7 @@ part of 'photo_metadata.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PhotoMetadata _$$_PhotoMetadataFromJson(Map<String, dynamic> json) =>
-    _$_PhotoMetadata(
+_$_PhotoMetadata _$$_PhotoMetadataFromJson(Map json) => _$_PhotoMetadata(
       photoReference: json['photoReference'] as String,
       width: json['width'] as int,
       height: json['height'] as int,

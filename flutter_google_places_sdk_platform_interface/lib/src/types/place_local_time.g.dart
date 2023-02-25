@@ -6,8 +6,7 @@ part of 'place_local_time.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PlaceLocalTime _$$_PlaceLocalTimeFromJson(Map<String, dynamic> json) =>
-    _$_PlaceLocalTime(
+_$_PlaceLocalTime _$$_PlaceLocalTimeFromJson(Map json) => _$_PlaceLocalTime(
       hours: json['hours'] as int,
       minutes: json['minutes'] as int,
     );

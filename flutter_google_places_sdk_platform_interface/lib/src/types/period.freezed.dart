@@ -131,7 +131,7 @@ class __$$_PeriodCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Period implements _Period {
-  const _$_Period({required this.open, required this.close});
+  const _$_Period({required this.open, this.close});
 
   factory _$_Period.fromJson(Map<String, dynamic> json) =>
       _$$_PeriodFromJson(json);
@@ -175,8 +175,7 @@ class _$_Period implements _Period {
 
 abstract class _Period implements Period {
   const factory _Period(
-      {required final TimeOfWeek open,
-      required final TimeOfWeek? close}) = _$_Period;
+      {required final TimeOfWeek open, final TimeOfWeek? close}) = _$_Period;
 
   factory _Period.fromJson(Map<String, dynamic> json) = _$_Period.fromJson;
 

@@ -14,11 +14,16 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+FetchPlaceResponse _$FetchPlaceResponseFromJson(Map<String, dynamic> json) {
+  return _FetchPlacePhotoResponseImage.fromJson(json);
+}
+
 /// @nodoc
 mixin _$FetchPlaceResponse {
   /// the Place returned by the response.
   Place? get place => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $FetchPlaceResponseCopyWith<FetchPlaceResponse> get copyWith =>
       throw _privateConstructorUsedError;
@@ -111,9 +116,12 @@ class __$$_FetchPlacePhotoResponseImageCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_FetchPlacePhotoResponseImage implements _FetchPlacePhotoResponseImage {
   const _$_FetchPlacePhotoResponseImage(this.place);
+
+  factory _$_FetchPlacePhotoResponseImage.fromJson(Map<String, dynamic> json) =>
+      _$$_FetchPlacePhotoResponseImageFromJson(json);
 
   /// the Place returned by the response.
   @override
@@ -132,6 +140,7 @@ class _$_FetchPlacePhotoResponseImage implements _FetchPlacePhotoResponseImage {
             (identical(other.place, place) || other.place == place));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, place);
 
@@ -141,11 +150,21 @@ class _$_FetchPlacePhotoResponseImage implements _FetchPlacePhotoResponseImage {
   _$$_FetchPlacePhotoResponseImageCopyWith<_$_FetchPlacePhotoResponseImage>
       get copyWith => __$$_FetchPlacePhotoResponseImageCopyWithImpl<
           _$_FetchPlacePhotoResponseImage>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_FetchPlacePhotoResponseImageToJson(
+      this,
+    );
+  }
 }
 
 abstract class _FetchPlacePhotoResponseImage implements FetchPlaceResponse {
   const factory _FetchPlacePhotoResponseImage(final Place? place) =
       _$_FetchPlacePhotoResponseImage;
+
+  factory _FetchPlacePhotoResponseImage.fromJson(Map<String, dynamic> json) =
+      _$_FetchPlacePhotoResponseImage.fromJson;
 
   @override
 

@@ -11,4 +11,8 @@ class FetchPlaceResponse with _$FetchPlaceResponse {
     /// the Place returned by the response.
     Place? place,
   ) = _FetchPlacePhotoResponseImage;
+
+    /// Parse an [place] from json.
+  factory FetchPlaceResponse.fromJson(Map<String, Object?> json) =>
+      _$FetchPlaceResponseFromJson(json);
 }

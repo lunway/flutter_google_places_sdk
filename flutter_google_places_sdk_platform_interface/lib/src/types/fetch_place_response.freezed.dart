@@ -14,16 +14,11 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-FetchPlaceResponse _$FetchPlaceResponseFromJson(Map<String, dynamic> json) {
-  return _FetchPlaceResponse.fromJson(json);
-}
-
 /// @nodoc
 mixin _$FetchPlaceResponse {
   /// the Place returned by the response.
   Place? get place => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $FetchPlaceResponseCopyWith<FetchPlaceResponse> get copyWith =>
       throw _privateConstructorUsedError;
@@ -113,12 +108,9 @@ class __$$_FetchPlaceResponseCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
 class _$_FetchPlaceResponse implements _FetchPlaceResponse {
   const _$_FetchPlaceResponse(this.place);
-
-  factory _$_FetchPlaceResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_FetchPlaceResponseFromJson(json);
 
   /// the Place returned by the response.
   @override
@@ -137,7 +129,6 @@ class _$_FetchPlaceResponse implements _FetchPlaceResponse {
             (identical(other.place, place) || other.place == place));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, place);
 
@@ -147,20 +138,10 @@ class _$_FetchPlaceResponse implements _FetchPlaceResponse {
   _$$_FetchPlaceResponseCopyWith<_$_FetchPlaceResponse> get copyWith =>
       __$$_FetchPlaceResponseCopyWithImpl<_$_FetchPlaceResponse>(
           this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_FetchPlaceResponseToJson(
-      this,
-    );
-  }
 }
 
 abstract class _FetchPlaceResponse implements FetchPlaceResponse {
   const factory _FetchPlaceResponse(final Place? place) = _$_FetchPlaceResponse;
-
-  factory _FetchPlaceResponse.fromJson(Map<String, dynamic> json) =
-      _$_FetchPlaceResponse.fromJson;
 
   @override
 

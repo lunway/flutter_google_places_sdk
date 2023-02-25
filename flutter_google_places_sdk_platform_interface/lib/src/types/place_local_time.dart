@@ -17,9 +17,5 @@ class PlaceLocalTime with _$PlaceLocalTime {
   }) = _PlaceLocalTime;
 
   /// Parse an [PlaceLocalTime] from json.
-  factory PlaceLocalTime.fromJson(Map<String, Object?> json) =>
-      _$PlaceLocalTimeFromJson(json);
-
-  // add tojson method
-  Map<String, Object?> toJson() => _$PlaceLocalTimeToJson(this);
+  factory PlaceLocalTime.fromJson(Map<String, Object?> json) => _$PlaceLocalTimeFromJson(json);
 }

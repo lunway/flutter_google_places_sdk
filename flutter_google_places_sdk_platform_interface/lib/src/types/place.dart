@@ -41,41 +41,5 @@ class Place with _$Place {
   }) = _Place;
 
   /// Parse an [Place] from json.
-  factory Place.fromJson(Map<String, Object?> json) =>
-      _$PlaceFromJson(json);
-
-  // add tojson method
-  Map<String, Object?> toJson() => _$PlaceToJson(this);
-
-//
-// static Place fromMap(Map<String, Object> map) => Place(
-//       address: map['address'],
-//       addressComponents: map['addressComponents']
-//           ?.map((entry) =>
-//               AddressComponent.fromJson(entry.cast<String, Object>()))
-//           ?.toList()
-//           ?.cast<AddressComponent>(),
-//       businessStatus: (map['businessStatus'] as String?)?.toBusinessStatus(),
-//       attributions: map['attributions']?.cast<String>(),
-//       latLng: LatLng.fromMap(toJsonMap(map['latLng'])),
-//       name: map['name'],
-//       openingHours: OpeningHours.fromMap(toJsonMap(map['openingHours'])),
-//       phoneNumber: map['phoneNumber'],
-//       photoMetadatas: map['photoMetadatas']
-//           ?.map((entry) => PhotoMetadata.fromMap(toJsonMap(entry)))
-//           ?.toList()
-//           ?.cast<PhotoMetadata>(),
-//       plusCode: PlusCode.fromMap(toJsonMap(map['plusCode'])),
-//       priceLevel: map['priceLevel'],
-//       rating: map['rating'],
-//       types: map['types']
-//           ?.map((entry) => (entry as String?)?.toPlaceType())
-//           ?.toList()
-//           ?.cast<PlaceType>(),
-//       userRatingsTotal: map['userRatingsTotal'],
-//       utcOffsetMinutes: map['utcOffsetMinutes'],
-//       viewport: LatLngBounds.fromMap(toJsonMap(map['viewport'])),
-//       websiteUri:
-//           map['websiteUri'] == null ? null : Uri.parse(map['websiteUri']),
-//     );
+  factory Place.fromJson(Map<String, Object?> json) => _$PlaceFromJson(json);
 }

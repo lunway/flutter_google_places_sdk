@@ -21,7 +21,4 @@ class LatLngBounds with _$LatLngBounds {
   /// Parse an [LatLngBounds] from json.
   factory LatLngBounds.fromJson(Map<String, Object?> json) =>
       _$LatLngBoundsFromJson(json);
-
-  // add tojson method
-  Map<String, Object?> toJson() => _$LatLngBoundsToJson(this);
 }

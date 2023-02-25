@@ -19,7 +19,4 @@ class LatLng with _$LatLng {
 
   /// Parse an [LatLng] from json.
   factory LatLng.fromJson(Map<String, Object?> json) => _$LatLngFromJson(json);
-
-  // add tojson method
-  Map<String, Object?> toJson() => _$LatLngToJson(this);
 }

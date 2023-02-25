@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 FetchPlaceResponse _$FetchPlaceResponseFromJson(Map<String, dynamic> json) {
-  return _FetchPlacePhotoResponseImage.fromJson(json);
+  return _FetchPlaceResponse.fromJson(json);
 }
 
 /// @nodoc
@@ -77,12 +77,11 @@ class _$FetchPlaceResponseCopyWithImpl<$Res, $Val extends FetchPlaceResponse>
 }
 
 /// @nodoc
-abstract class _$$_FetchPlacePhotoResponseImageCopyWith<$Res>
+abstract class _$$_FetchPlaceResponseCopyWith<$Res>
     implements $FetchPlaceResponseCopyWith<$Res> {
-  factory _$$_FetchPlacePhotoResponseImageCopyWith(
-          _$_FetchPlacePhotoResponseImage value,
-          $Res Function(_$_FetchPlacePhotoResponseImage) then) =
-      __$$_FetchPlacePhotoResponseImageCopyWithImpl<$Res>;
+  factory _$$_FetchPlaceResponseCopyWith(_$_FetchPlaceResponse value,
+          $Res Function(_$_FetchPlaceResponse) then) =
+      __$$_FetchPlaceResponseCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Place? place});
@@ -92,13 +91,11 @@ abstract class _$$_FetchPlacePhotoResponseImageCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FetchPlacePhotoResponseImageCopyWithImpl<$Res>
-    extends _$FetchPlaceResponseCopyWithImpl<$Res,
-        _$_FetchPlacePhotoResponseImage>
-    implements _$$_FetchPlacePhotoResponseImageCopyWith<$Res> {
-  __$$_FetchPlacePhotoResponseImageCopyWithImpl(
-      _$_FetchPlacePhotoResponseImage _value,
-      $Res Function(_$_FetchPlacePhotoResponseImage) _then)
+class __$$_FetchPlaceResponseCopyWithImpl<$Res>
+    extends _$FetchPlaceResponseCopyWithImpl<$Res, _$_FetchPlaceResponse>
+    implements _$$_FetchPlaceResponseCopyWith<$Res> {
+  __$$_FetchPlaceResponseCopyWithImpl(
+      _$_FetchPlaceResponse _value, $Res Function(_$_FetchPlaceResponse) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -106,7 +103,7 @@ class __$$_FetchPlacePhotoResponseImageCopyWithImpl<$Res>
   $Res call({
     Object? place = freezed,
   }) {
-    return _then(_$_FetchPlacePhotoResponseImage(
+    return _then(_$_FetchPlaceResponse(
       freezed == place
           ? _value.place
           : place // ignore: cast_nullable_to_non_nullable
@@ -117,11 +114,11 @@ class __$$_FetchPlacePhotoResponseImageCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FetchPlacePhotoResponseImage implements _FetchPlacePhotoResponseImage {
-  const _$_FetchPlacePhotoResponseImage(this.place);
+class _$_FetchPlaceResponse implements _FetchPlaceResponse {
+  const _$_FetchPlaceResponse(this.place);
 
-  factory _$_FetchPlacePhotoResponseImage.fromJson(Map<String, dynamic> json) =>
-      _$$_FetchPlacePhotoResponseImageFromJson(json);
+  factory _$_FetchPlaceResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_FetchPlaceResponseFromJson(json);
 
   /// the Place returned by the response.
   @override
@@ -136,7 +133,7 @@ class _$_FetchPlacePhotoResponseImage implements _FetchPlacePhotoResponseImage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FetchPlacePhotoResponseImage &&
+            other is _$_FetchPlaceResponse &&
             (identical(other.place, place) || other.place == place));
   }
 
@@ -147,24 +144,23 @@ class _$_FetchPlacePhotoResponseImage implements _FetchPlacePhotoResponseImage {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FetchPlacePhotoResponseImageCopyWith<_$_FetchPlacePhotoResponseImage>
-      get copyWith => __$$_FetchPlacePhotoResponseImageCopyWithImpl<
-          _$_FetchPlacePhotoResponseImage>(this, _$identity);
+  _$$_FetchPlaceResponseCopyWith<_$_FetchPlaceResponse> get copyWith =>
+      __$$_FetchPlaceResponseCopyWithImpl<_$_FetchPlaceResponse>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FetchPlacePhotoResponseImageToJson(
+    return _$$_FetchPlaceResponseToJson(
       this,
     );
   }
 }
 
-abstract class _FetchPlacePhotoResponseImage implements FetchPlaceResponse {
-  const factory _FetchPlacePhotoResponseImage(final Place? place) =
-      _$_FetchPlacePhotoResponseImage;
+abstract class _FetchPlaceResponse implements FetchPlaceResponse {
+  const factory _FetchPlaceResponse(final Place? place) = _$_FetchPlaceResponse;
 
-  factory _FetchPlacePhotoResponseImage.fromJson(Map<String, dynamic> json) =
-      _$_FetchPlacePhotoResponseImage.fromJson;
+  factory _FetchPlaceResponse.fromJson(Map<String, dynamic> json) =
+      _$_FetchPlaceResponse.fromJson;
 
   @override
 
@@ -172,6 +168,6 @@ abstract class _FetchPlacePhotoResponseImage implements FetchPlaceResponse {
   Place? get place;
   @override
   @JsonKey(ignore: true)
-  _$$_FetchPlacePhotoResponseImageCopyWith<_$_FetchPlacePhotoResponseImage>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$_FetchPlaceResponseCopyWith<_$_FetchPlaceResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }

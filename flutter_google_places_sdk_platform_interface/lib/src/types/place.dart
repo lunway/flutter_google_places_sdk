@@ -43,7 +43,7 @@ class Place with _$Place {
   }) = _Place;
 
   /// Parse an [Place] from json.
-  factory Place.fromJson(Map<String, Object?> json) => _$PlaceFromJson(json);
+  factory Place.fromJson(Map<String, dynamic> json) => _$PlaceFromJson(json);
 
   static Place fromMap(Map<String, dynamic> map) => Place(
         address: map['address'],

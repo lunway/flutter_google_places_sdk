@@ -21,10 +21,10 @@ OpeningHours _$OpeningHoursFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$OpeningHours {
   /// A list of Period objects that provide more detailed information that is equivalent to the data provided by getWeekdayText().
-  List<Period> get periods => throw _privateConstructorUsedError;
+  List<Period>? get periods => throw _privateConstructorUsedError;
 
   /// Returns a list of strings that represent opening and closing hours in human readable form.
-  List<String> get weekdayText => throw _privateConstructorUsedError;
+  List<String>? get weekdayText => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,7 +38,7 @@ abstract class $OpeningHoursCopyWith<$Res> {
           OpeningHours value, $Res Function(OpeningHours) then) =
       _$OpeningHoursCopyWithImpl<$Res, OpeningHours>;
   @useResult
-  $Res call({List<Period> periods, List<String> weekdayText});
+  $Res call({List<Period>? periods, List<String>? weekdayText});
 }
 
 /// @nodoc
@@ -54,18 +54,18 @@ class _$OpeningHoursCopyWithImpl<$Res, $Val extends OpeningHours>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? periods = null,
-    Object? weekdayText = null,
+    Object? periods = freezed,
+    Object? weekdayText = freezed,
   }) {
     return _then(_value.copyWith(
-      periods: null == periods
+      periods: freezed == periods
           ? _value.periods
           : periods // ignore: cast_nullable_to_non_nullable
-              as List<Period>,
-      weekdayText: null == weekdayText
+              as List<Period>?,
+      weekdayText: freezed == weekdayText
           ? _value.weekdayText
           : weekdayText // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String>?,
     ) as $Val);
   }
 }
@@ -78,7 +78,7 @@ abstract class _$$_OpeningHoursCopyWith<$Res>
       __$$_OpeningHoursCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<Period> periods, List<String> weekdayText});
+  $Res call({List<Period>? periods, List<String>? weekdayText});
 }
 
 /// @nodoc
@@ -92,18 +92,18 @@ class __$$_OpeningHoursCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? periods = null,
-    Object? weekdayText = null,
+    Object? periods = freezed,
+    Object? weekdayText = freezed,
   }) {
     return _then(_$_OpeningHours(
-      periods: null == periods
+      periods: freezed == periods
           ? _value._periods
           : periods // ignore: cast_nullable_to_non_nullable
-              as List<Period>,
-      weekdayText: null == weekdayText
+              as List<Period>?,
+      weekdayText: freezed == weekdayText
           ? _value._weekdayText
           : weekdayText // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as List<String>?,
     ));
   }
 }
@@ -112,8 +112,7 @@ class __$$_OpeningHoursCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_OpeningHours implements _OpeningHours {
   const _$_OpeningHours(
-      {required final List<Period> periods,
-      required final List<String> weekdayText})
+      {final List<Period>? periods, final List<String>? weekdayText})
       : _periods = periods,
         _weekdayText = weekdayText;
 
@@ -121,25 +120,29 @@ class _$_OpeningHours implements _OpeningHours {
       _$$_OpeningHoursFromJson(json);
 
   /// A list of Period objects that provide more detailed information that is equivalent to the data provided by getWeekdayText().
-  final List<Period> _periods;
+  final List<Period>? _periods;
 
   /// A list of Period objects that provide more detailed information that is equivalent to the data provided by getWeekdayText().
   @override
-  List<Period> get periods {
+  List<Period>? get periods {
+    final value = _periods;
+    if (value == null) return null;
     if (_periods is EqualUnmodifiableListView) return _periods;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_periods);
+    return EqualUnmodifiableListView(value);
   }
 
   /// Returns a list of strings that represent opening and closing hours in human readable form.
-  final List<String> _weekdayText;
+  final List<String>? _weekdayText;
 
   /// Returns a list of strings that represent opening and closing hours in human readable form.
   @override
-  List<String> get weekdayText {
+  List<String>? get weekdayText {
+    final value = _weekdayText;
+    if (value == null) return null;
     if (_weekdayText is EqualUnmodifiableListView) return _weekdayText;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_weekdayText);
+    return EqualUnmodifiableListView(value);
   }
 
   @override
@@ -180,8 +183,8 @@ class _$_OpeningHours implements _OpeningHours {
 
 abstract class _OpeningHours implements OpeningHours {
   const factory _OpeningHours(
-      {required final List<Period> periods,
-      required final List<String> weekdayText}) = _$_OpeningHours;
+      {final List<Period>? periods,
+      final List<String>? weekdayText}) = _$_OpeningHours;
 
   factory _OpeningHours.fromJson(Map<String, dynamic> json) =
       _$_OpeningHours.fromJson;
@@ -189,11 +192,11 @@ abstract class _OpeningHours implements OpeningHours {
   @override
 
   /// A list of Period objects that provide more detailed information that is equivalent to the data provided by getWeekdayText().
-  List<Period> get periods;
+  List<Period>? get periods;
   @override
 
   /// Returns a list of strings that represent opening and closing hours in human readable form.
-  List<String> get weekdayText;
+  List<String>? get weekdayText;
   @override
   @JsonKey(ignore: true)
   _$$_OpeningHoursCopyWith<_$_OpeningHours> get copyWith =>

@@ -12,10 +12,10 @@ class LatLngBounds with _$LatLngBounds {
   /// constructs a [LatLngBounds] object.
   const factory LatLngBounds({
     /// The southwest coordinate of the bounds.
-    required LatLng southwest,
+    LatLng? southwest,
 
     /// The northeast coordinate of the bounds.
-    required LatLng northeast,
+    LatLng? northeast,
   }) = _LatLngBounds;
 
   /// Parse an [LatLngBounds] from json.

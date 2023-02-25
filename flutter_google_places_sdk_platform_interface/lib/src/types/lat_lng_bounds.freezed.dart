@@ -21,10 +21,10 @@ LatLngBounds _$LatLngBoundsFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$LatLngBounds {
   /// The southwest coordinate of the bounds.
-  LatLng get southwest => throw _privateConstructorUsedError;
+  LatLng? get southwest => throw _privateConstructorUsedError;
 
   /// The northeast coordinate of the bounds.
-  LatLng get northeast => throw _privateConstructorUsedError;
+  LatLng? get northeast => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,10 +38,10 @@ abstract class $LatLngBoundsCopyWith<$Res> {
           LatLngBounds value, $Res Function(LatLngBounds) then) =
       _$LatLngBoundsCopyWithImpl<$Res, LatLngBounds>;
   @useResult
-  $Res call({LatLng southwest, LatLng northeast});
+  $Res call({LatLng? southwest, LatLng? northeast});
 
-  $LatLngCopyWith<$Res> get southwest;
-  $LatLngCopyWith<$Res> get northeast;
+  $LatLngCopyWith<$Res>? get southwest;
+  $LatLngCopyWith<$Res>? get northeast;
 }
 
 /// @nodoc
@@ -57,33 +57,41 @@ class _$LatLngBoundsCopyWithImpl<$Res, $Val extends LatLngBounds>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? southwest = null,
-    Object? northeast = null,
+    Object? southwest = freezed,
+    Object? northeast = freezed,
   }) {
     return _then(_value.copyWith(
-      southwest: null == southwest
+      southwest: freezed == southwest
           ? _value.southwest
           : southwest // ignore: cast_nullable_to_non_nullable
-              as LatLng,
-      northeast: null == northeast
+              as LatLng?,
+      northeast: freezed == northeast
           ? _value.northeast
           : northeast // ignore: cast_nullable_to_non_nullable
-              as LatLng,
+              as LatLng?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $LatLngCopyWith<$Res> get southwest {
-    return $LatLngCopyWith<$Res>(_value.southwest, (value) {
+  $LatLngCopyWith<$Res>? get southwest {
+    if (_value.southwest == null) {
+      return null;
+    }
+
+    return $LatLngCopyWith<$Res>(_value.southwest!, (value) {
       return _then(_value.copyWith(southwest: value) as $Val);
     });
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $LatLngCopyWith<$Res> get northeast {
-    return $LatLngCopyWith<$Res>(_value.northeast, (value) {
+  $LatLngCopyWith<$Res>? get northeast {
+    if (_value.northeast == null) {
+      return null;
+    }
+
+    return $LatLngCopyWith<$Res>(_value.northeast!, (value) {
       return _then(_value.copyWith(northeast: value) as $Val);
     });
   }
@@ -97,12 +105,12 @@ abstract class _$$_LatLngBoundsCopyWith<$Res>
       __$$_LatLngBoundsCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({LatLng southwest, LatLng northeast});
+  $Res call({LatLng? southwest, LatLng? northeast});
 
   @override
-  $LatLngCopyWith<$Res> get southwest;
+  $LatLngCopyWith<$Res>? get southwest;
   @override
-  $LatLngCopyWith<$Res> get northeast;
+  $LatLngCopyWith<$Res>? get northeast;
 }
 
 /// @nodoc
@@ -116,18 +124,18 @@ class __$$_LatLngBoundsCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? southwest = null,
-    Object? northeast = null,
+    Object? southwest = freezed,
+    Object? northeast = freezed,
   }) {
     return _then(_$_LatLngBounds(
-      southwest: null == southwest
+      southwest: freezed == southwest
           ? _value.southwest
           : southwest // ignore: cast_nullable_to_non_nullable
-              as LatLng,
-      northeast: null == northeast
+              as LatLng?,
+      northeast: freezed == northeast
           ? _value.northeast
           : northeast // ignore: cast_nullable_to_non_nullable
-              as LatLng,
+              as LatLng?,
     ));
   }
 }
@@ -135,18 +143,18 @@ class __$$_LatLngBoundsCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LatLngBounds implements _LatLngBounds {
-  const _$_LatLngBounds({required this.southwest, required this.northeast});
+  const _$_LatLngBounds({this.southwest, this.northeast});
 
   factory _$_LatLngBounds.fromJson(Map<String, dynamic> json) =>
       _$$_LatLngBoundsFromJson(json);
 
   /// The southwest coordinate of the bounds.
   @override
-  final LatLng southwest;
+  final LatLng? southwest;
 
   /// The northeast coordinate of the bounds.
   @override
-  final LatLng northeast;
+  final LatLng? northeast;
 
   @override
   String toString() {
@@ -184,8 +192,7 @@ class _$_LatLngBounds implements _LatLngBounds {
 
 abstract class _LatLngBounds implements LatLngBounds {
   const factory _LatLngBounds(
-      {required final LatLng southwest,
-      required final LatLng northeast}) = _$_LatLngBounds;
+      {final LatLng? southwest, final LatLng? northeast}) = _$_LatLngBounds;
 
   factory _LatLngBounds.fromJson(Map<String, dynamic> json) =
       _$_LatLngBounds.fromJson;
@@ -193,11 +200,11 @@ abstract class _LatLngBounds implements LatLngBounds {
   @override
 
   /// The southwest coordinate of the bounds.
-  LatLng get southwest;
+  LatLng? get southwest;
   @override
 
   /// The northeast coordinate of the bounds.
-  LatLng get northeast;
+  LatLng? get northeast;
   @override
   @JsonKey(ignore: true)
   _$$_LatLngBoundsCopyWith<_$_LatLngBounds> get copyWith =>

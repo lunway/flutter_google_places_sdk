@@ -25,7 +25,7 @@ const _$DayOfWeekEnumMap = {
   DayOfWeek.MONDAY: 'MONDAY',
   DayOfWeek.TUESDAY: 'TUESDAY',
   DayOfWeek.WEDNESDAY: 'WEDNESDAY',
-  DayOfWeek.THRUSDAY: 'THRUSDAY',
+  DayOfWeek.THURSDAY: 'THURSDAY',
   DayOfWeek.FRIDAY: 'FRIDAY',
   DayOfWeek.SATURDAY: 'SATURDAY',
 };

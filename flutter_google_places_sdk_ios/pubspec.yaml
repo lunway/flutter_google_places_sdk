@@ -14,6 +14,7 @@ dependencies:
     git:
       url: git@github.com:lunway/flutter_google_places_sdk.git
       path: flutter_google_places_sdk_platform_interface
+      ref: 5c8349d
 
 dev_dependencies:
   flutter_test:

@@ -8,6 +8,8 @@ import 'package:flutter_google_places_sdk_platform_interface/src/types/place_typ
 import 'package:flutter_google_places_sdk_platform_interface/src/types/plus_code.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+import 'utils.dart';
+
 part 'place.freezed.dart';
 part 'place.g.dart';
 
@@ -42,4 +44,24 @@ class Place with _$Place {
 
   /// Parse an [Place] from json.
   factory Place.fromJson(Map<String, Object?> json) => _$PlaceFromJson(json);
+
+  static Place fromMap(Map<String, dynamic> map) => Place(
+        address: map['address'],
+        addressComponents:
+            map['addressComponents']?.map((entry) => AddressComponent.fromJson(entry.cast<String, dynamic>()))?.toList()?.cast<AddressComponent>(),
+        attributions: map['attributions']?.cast<String>(),
+        latLng: LatLng.fromJson(toJsonMap(map['latLng']) ?? {}),
+        name: map['name'],
+        openingHours: OpeningHours.fromJson(toJsonMap(map['openingHours']) ?? {}),
+        phoneNumber: map['phoneNumber'],
+        photoMetadatas: map['photoMetadatas']?.map((entry) => PhotoMetadata.fromJson(toJsonMap(entry) ?? {}))?.toList()?.cast<PhotoMetadata>(),
+        plusCode: PlusCode.fromJson(toJsonMap(map['plusCode']) ?? {}),
+        priceLevel: map['priceLevel'],
+        rating: map['rating'],
+        types: map['types']?.map((entry) => (entry as String?)?.toPlaceType())?.toList()?.cast<PlaceType>(),
+        userRatingsTotal: map['userRatingsTotal'],
+        utcOffsetMinutes: map['utcOffsetMinutes'],
+        viewport: LatLngBounds.fromJson(toJsonMap(map['viewport']) ?? {}),
+        websiteUri: map['websiteUri'] == null ? null : Uri.parse(map['websiteUri']),
+      );
 }

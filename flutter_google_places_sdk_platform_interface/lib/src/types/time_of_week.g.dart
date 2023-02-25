@@ -19,11 +19,11 @@ Map<String, dynamic> _$$_TimeOfWeekToJson(_$_TimeOfWeek instance) =>
     };
 
 const _$DayOfWeekEnumMap = {
-  DayOfWeek.Sunday: 'Sunday',
-  DayOfWeek.Monday: 'Monday',
-  DayOfWeek.Tuesday: 'Tuesday',
-  DayOfWeek.Wednesday: 'Wednesday',
-  DayOfWeek.Thursday: 'Thursday',
-  DayOfWeek.Friday: 'Friday',
-  DayOfWeek.Saturday: 'Saturday',
+  DayOfWeek.SUNDAY: 'SUNDAY',
+  DayOfWeek.MONDAY: 'MONDAY',
+  DayOfWeek.TUESDAY: 'TUESDAY',
+  DayOfWeek.WEDNESDAY: 'WEDNESDAY',
+  DayOfWeek.THRUSDAY: 'THRUSDAY',
+  DayOfWeek.FRIDAY: 'FRIDAY',
+  DayOfWeek.SATURDAY: 'SATURDAY',
 };

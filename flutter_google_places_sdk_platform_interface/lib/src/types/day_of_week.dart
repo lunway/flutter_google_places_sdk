@@ -2,11 +2,11 @@
 ///
 /// Ref: https://developers.google.com/maps/documentation/places/android-sdk/reference/com/google/android/libraries/places/api/model/DayOfWeek
 enum DayOfWeek {
-  Sunday,
-  Monday,
-  Tuesday,
-  Wednesday,
-  Thursday,
-  Friday,
-  Saturday,
+  SUNDAY,
+  MONDAY,
+  TUESDAY,
+  WEDNESDAY,
+  THRUSDAY,
+  FRIDAY,
+  SATURDAY,
 }

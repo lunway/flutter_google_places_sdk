@@ -103,7 +103,7 @@ class FlutterGooglePlacesSdkMethodChannel
 
   FetchPlaceResponse _responseFromPlaceDetails(dynamic value) {
     final Place? place =
-        value == null ? null : Place.fromJson(value.cast<String, dynamic>());
+        value == null ? null : Place.fromMap(value.cast<String, dynamic>());
     return FetchPlaceResponse(place);
   }
 

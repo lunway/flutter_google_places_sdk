@@ -2,7 +2,6 @@ import 'package:flutter_google_places_sdk_platform_interface/src/types/place.dar
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'fetch_place_response.freezed.dart';
-part 'fetch_place_response.g.dart';
 
 /// The response for a [FlutterGooglePlacesSdkPlatform.fetchPlace] request
 @freezed
